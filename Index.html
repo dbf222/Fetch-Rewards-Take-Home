@@ -23,8 +23,8 @@
       <form class="form" id="form" action="index.html" method="post">
             <!--  Name -->
         <div class="form-control">
-          <label for="Name">Full Name </label>
-          <input type="text" placeholder="Full Name" id="Fullname">
+          <label for=fullname">Full Name </label>
+          <input type="text" placeholder="Full Name" id="fullname">
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Please input section.</small>
@@ -32,8 +32,8 @@
 
             <!--  Email -->
         <div class="form-control">
-          <label for="Email"> Email </label>
-          <input type="email" placeholder="Email" id="Email">
+          <label for="email"> Email </label>
+          <input type="email" placeholder="Email" id="email">
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Please input section.</small>
@@ -41,33 +41,29 @@
 
             <!--  Password -->
         <div class="form-control">
-          <label for="Passoword">Password </label>
-          <input type="text" placeholder="Password" id="Password">
+          <label for="passoword">Password </label>
+          <input type="text" placeholder="Password" id="password">
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Please input section.</small>
         </div>
 
     <!--  Occupation -->
-        <div class="form-control">
-          <label for="Occupation"> Occupation </label>
-          <input type="text" placeholder="Occupation" id="Occupation">
-          <i class="fas fa-check-circle"></i>
-          <i class="fas fa-exclamation-circle"></i>
-          <small>Please input section.</small>
-
+        <select name="occupation" id="sel"  onchange="show(this)" class="form-control input-lg">
+          <option value=""> Choose Occupation</option>
+        </select>
     <!--  State -->
-        </div><div class="form-control">
-          <label for="State"> State</label>
-          <input type="text" placeholder="State" id="State">
-          <i class="fas fa-check-circle"></i>
-          <i class="fas fa-exclamation-circle"></i>
-          <small>Please input section.</small>
-        </div>
+
+        <select name="state"  id="sel"  onchange="show(this)"class="form-control input-lg">
+          <option value="">--Select --</option>
+        </select>
 
         <button type="button" name="button">Submit</button>
 
       </form>
     </div>
+    <script src="js/selections.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/form.js" charset="utf-8"></script>
   </body>
 </html>
