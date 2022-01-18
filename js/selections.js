@@ -24,6 +24,6 @@ function populateSelect() {
 function show(ele) {
       // Get the selected value from <select> element and show it.
       var msg = document.getElementById('msg');
-      msg.innerHTML = 'Selected Bird: <b>' + ele.options[ele.selectedIndex].text + '</b> </br>' +
+      msg.innerHTML = 'State: <b>' + ele.options[ele.selectedIndex].text + '</b> </br>' +
           'ID: <b>' + ele.value + '</b>';
   }

@@ -34,46 +34,47 @@ function checkInputs() {
   if (emailValue === '') {
     setErrorFor(email, 'Please enter email');
     //Valid email
-  } else if (!isEmail(emailValue)) {
+  } else if (!isEmail(emailValue)){
     setErrorFor(email, 'Email is not Valid');
-  } else {
+  }else{
     setSuccessFor(email);
   }
 
-  if (passwordValue === '') {
+  if (passwordValue === ''){
     setErrorFor(password, 'Please enter passowrd');
   } else {
     setSuccessFor(password);
   }
 
-  if (occupationValue === '') {
+  if (occupationValue === ''){
     setErrorFor(occupation, 'Please enter occupation');
   } else {
     setSuccessFor(occupation);
   }
 
-  if (stateValue === '') {
+  if (stateValue === ''){
     setErrorFor(state, 'Please enter your state');
   } else {
     setSuccessFor(state);
   }
 }
 
+
 function setErrorFor(input, message) {
-  const formControl = input.parentElement;
-  const small = formControl.querySelector('small');
-  formControl.className = 'form-control error';
-  small.innerText = message;
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.className = 'form-control error';
+	small.innerText = message;
 }
 
 function setSuccessFor(input) {
-  const formControl = input.parentElement;
-  formControl.className = 'form-control success';
+	const formControl = input.parentElement;
+	formControl.className = 'form-control success';
 }
 
 
 //Test to make sure valid email
 
 function isEmail(email) {
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
